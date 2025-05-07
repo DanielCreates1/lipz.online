@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoe Store</title>
+  <title>ShoeStore - Step Into Style</title>
+<meta name="description" content="Shop the best in athletic and casual shoes at ShoeStore." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="index.html">Lipzonline</a></h1>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Step Into Style</h2>
+    <p>Modern, athletic, and built for comfort.</p>
+    <a href="products.html" class="btn">Shop Now</a>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - ShoeBrand</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="index.html">ShoeBrand</a></h1>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="products-grid" id="product-list"></main>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Detail - ShoeBrand</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="index.html">ShoeBrand</a></h1>
+      <ul class="nav-links">
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="product-detail" id="product-detail"></main>
+
+  <script src="js/product-detail.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart - ShoeBrand</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <h1><a href="index.html">ShoeBrand</a></h1>
+      <ul class="nav-links">
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <p id="total-price"></p>
+    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+  </main>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout Complete - ShoeBrand</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="localStorage.removeItem('cart')">
+  <header>
+    <nav>
+      <h1><a href="index.html">ShoeBrand</a></h1>
+      <ul class="nav-links">
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="cart.html">Cart 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="checkout-message">
+    <h2>Thank You for Your Purchase!</h2>
+    <p>Your order has been received and is being processed.</p>
+    <a href="index.html" class="btn">Return to Home</a>
+  </main>
+</body>
+</html>
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #111;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f2f2f2;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: black;
+  color: white;
+  text-decoration: none;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-detail {
+  padding: 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #000;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+
+  .product-card img,
+  .product-detail img {
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+});
+
+const products = [
+  {
+    id: 1,
+    name: "Red-White Sneakers",
+    price: 89.99,
+    image: "assets/images/sneaker1.jpg"
+  },
+  {
+    id: 2,
+    name: "Black-White Running Shoes",
+    price: 99.99,
+    image: "assets/images/sneaker2.jpg"
+  },
+  {
+    id: 3,

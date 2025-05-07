@@ -1,0 +1,12 @@
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function renderCart() {
+  const cartContainer = document.getElementById("cart-items");
+  cart.forEach(item => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+      <p>${item.name} - $${item.price}</p>
+    `;
+    cartContainer.appendChild(div);
+  });
+}
